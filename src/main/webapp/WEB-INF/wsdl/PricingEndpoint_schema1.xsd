@@ -7,7 +7,7 @@
 
   <xs:complexType name="entryPrice">
     <xs:sequence>
-      <xs:element name="currencyCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="currencyCodeISO4217" type="xs:string" minOccurs="0"/>
       <xs:element name="value" type="xs:decimal" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>

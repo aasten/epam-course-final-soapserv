@@ -13,20 +13,22 @@ public class PricingEndpoint implements Pricing {
     
     public PricingEndpoint() {} // required for jax rs 1.0
     
-    @Override
+
     @WebMethod
+    @Override
     public EntryPrice getEntryPrice(@WebParam(name="entryId") String entryId) throws NoEntryPricingInfo {
         Long entryNumId;
-        if(null == entryId) throw new NoEntryPricingInfo("Argument is null");
+        if(null == entryId) throw new NoEntryPricingInfo("Entry id cannot be null");
+
         try {
             entryNumId = Long.parseLong(entryId);
             if(entryNumId < 0) throw new RuntimeException("Entry id must be positive integer");
         } catch(RuntimeException e) {
-            throw new NoEntryPricingInfo("Bad entry id", e);
+            throw new NoEntryPricingInfo("Bad entry id: " + e.getMessage(), e);
         }
         // stub
         EntryPrice stub = new EntryPrice();
-        stub.setCurrencyCode("USD");
+        stub.setCurrencyCodeISO4217("USD");
         stub.setValue(new BigDecimal("42"));
         return stub;
     }
