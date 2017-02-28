@@ -56,10 +56,11 @@
           </execution>
         </executions>
         <configuration>
-          <sei>by.ishop.Test</sei>
+          <sei>by.ishop.soapservice.PricingEndpoint</sei>
           <genWsdl>true</genWsdl>
           <keep>true</keep>
           <resourceDestDir>${basedir}/src/main/webapp/WEB-INF/wsdl</resourceDestDir>
+            <!--occured that strictly src/main/java is required here below-->
           <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
         </configuration>
       </plugin>
@@ -72,13 +73,6 @@
           <port>7000</port>
           <path>/soapservice</path>
         </configuration>
-        <!--<configuration>-->
-        <!--<path>/</path>-->
-        <!--<contextFile>src/main/webapp/WEB-INF/config/app-config.xml</contextFile>-->
-        <!--<mode>context</mode>-->
-        <!--<charset>UTF-8</charset>-->
-        <!--<warDirectory>target/${project.artifactId}-${project.version}</warDirectory>-->
-        <!--</configuration>-->
       </plugin>
     </plugins>
   </build>
