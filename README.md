@@ -5,6 +5,7 @@ MySQL schema
 
 after created schema 'ishop':
 
+```SQL
 CREATE TABLE `ishop`.`productEntry` (
   `idproductEntry` INT NOT NULL AUTO_INCREMENT,
   `imgURL` VARCHAR(2083) NULL,
@@ -27,3 +28,4 @@ CREATE TABLE `ishop`.`productPrice` (
   `priceValue` DECIMAL(10,2) NOT NULL,
   PRIMARY KEY (`idproductPrice`),
   UNIQUE INDEX `idproductPrice_UNIQUE` (`idproductPrice` ASC));
+```
