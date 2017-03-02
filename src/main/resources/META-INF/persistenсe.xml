@@ -2,7 +2,7 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
-    <persistence-unit name="IShopSoap" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="by.ishop.data.persistence.JPADAOPrice" transaction-type="RESOURCE_LOCAL">
         <!-- Persistence provider -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
@@ -10,6 +10,7 @@
         <class>by.ishop.data.persistence.PersistedPrice</class>
 
         <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <!-- The JDBC URL to the database instance -->
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:mysql://localhost:3306/ishop?useSSL=false" />

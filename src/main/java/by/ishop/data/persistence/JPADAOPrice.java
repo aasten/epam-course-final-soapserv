@@ -12,7 +12,7 @@ import java.util.List;
 public class JPADAOPrice implements DAO<Integer> {
 
     private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
-            .createEntityManagerFactory("IShopSoap");
+            .createEntityManagerFactory("by.ishop.data.persistence.JPADAOPrice");
 
 
     @Override
