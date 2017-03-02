@@ -1,4 +1,4 @@
-package by.ishop.soapservice;
+package by.ishop.data.price;
 
 import java.math.BigDecimal;
 
