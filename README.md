@@ -8,6 +8,7 @@ after created schema 'ishop':
 ```SQL
 CREATE TABLE `ishop`.`productEntry` (
   `idproductEntry` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(512) NOT NULL,
   `imgURL` VARCHAR(2083) NULL,
   `rate` DECIMAL(2,1) NULL,
   PRIMARY KEY (`idproductEntry`),
