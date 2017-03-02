@@ -25,7 +25,7 @@ public class JPADAOPrice implements DAO<Integer> {
             transaction.begin();
 
             TypedQuery<PersistedPrice> query = manager.createQuery(
-                    "Select s from productPrice s where s.productEntryId=:arg1", PersistedPrice.class);
+                    "Select s from PersistedPrice s where s.productId=:arg1", PersistedPrice.class);
             query.setParameter("arg1", productId);
             // selecting last price if multiple occurs
             query.setMaxResults(1);
