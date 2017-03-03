@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://soapservice.ishop.by/">
+<xs:schema version="1.0" xmlns:ns1="http://soapservice.ishop.by/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:import namespace="http://soapservice.ishop.by/" schemaLocation="PricingEndpoint_schema1.xsd"/>
 
